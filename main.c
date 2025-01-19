@@ -54,6 +54,10 @@ int main() {
           unsigned char byte = Stringto8Byte("00000011");
           fwrite(&byte, sizeof(byte), 1, outputFile);
           fflag = 1;
+        }else if(!strcmp(bitString,"not")){
+          unsigned char byte = Stringto8Byte("00000100");
+          fwrite(&byte, sizeof(byte), 1, outputFile);
+          fflag = 1;
         }else{
           if(fflag = 0){break;}
             unsigned char byte = Stringto8Byte(bitString);
